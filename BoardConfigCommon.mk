@@ -121,6 +121,7 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_SEPOLICY_UNION := \
        device.te \
        app.te \
+       recovery.te \
        file_contexts
 
 BOARD_NFC_HAL_SUFFIX := g2
