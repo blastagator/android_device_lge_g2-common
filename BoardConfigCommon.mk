@@ -162,6 +162,7 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 TW_INCLUDE_L_CRYPTO := true
 TARGET_RECOVERY_INITRC := device/lge/g2-common/twrp/init.rc
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Post recovery boot script
 PRODUCT_COPY_FILES += device/lge/g2-common/twrp/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
