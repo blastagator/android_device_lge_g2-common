@@ -15,4 +15,7 @@
   <remove-project name="android_external_e2fsprogs" />
   <project name="android_external_e2fsprogs" path="external/e2fsprogs" remote="CyanogenMod" revision="cm-12.1" />
 
+  <remove-project name="android_external_f2fs-tools" />
+  <project name="cm_external_f2fs-tools" path="external/f2fs-tools" remote="blastagator" revision="cm-12.1" />
+
 </manifest>
