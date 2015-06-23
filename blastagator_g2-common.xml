@@ -3,6 +3,7 @@
 
   <remote name="blastagator" fetch="https://github.com/blastagator/" />
   <remote name="CyanogenMod" fetch="https://github.com/CyanogenMod/" />
+  <remote name="omnirom-again" fetch="https://github.com/omnirom/" />
 
   <project name="cm_device_lge_g2-common" path="device/lge/g2-common" remote="blastagator" revision="cm-11.0" />
 
@@ -17,5 +18,8 @@
 
   <remove-project name="android_external_f2fs-tools" />
   <project name="cm_external_f2fs-tools" path="external/f2fs-tools" remote="blastagator" revision="cm-12.1" />
+
+  <remove-project name="android_bootable_recovery" />
+  <project name="android_bootable_recovery" path="bootable/recovery" remote="omnirom-again" revision="android-5.1"/>
 
 </manifest>
