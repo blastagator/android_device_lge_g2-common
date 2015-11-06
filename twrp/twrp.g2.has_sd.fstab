@@ -13,7 +13,6 @@
 /tz emmc /dev/block/platform/msm_sdcc.1/by-name/tz flags=backup=0;display=tz
 /usb_otg vfat /dev/block/sda1 /dev/block/sda flags=display="USB-OTG";storage;removable
 /sns ext4 /dev/block/platform/msm_sdcc.1/by-name/sns flags=backup=1;display=Sensors
-/system_image emmc /dev/block/platform/msm_sdcc.1/by-name/system
 
 # Can cause crashes
 #/misc emmc /dev/block/platform/msm_sdcc.1/by-name/misc
