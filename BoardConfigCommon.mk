@@ -155,7 +155,7 @@ TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 
 # My custom flags
-TW_SKIP_CHECK_SYSTEM_RW := true
+TW_SKIP_RO_PARTITION_CHECK := true
 
 # Post recovery boot script
 PRODUCT_COPY_FILES += device/lge/g2-common/twrp/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
