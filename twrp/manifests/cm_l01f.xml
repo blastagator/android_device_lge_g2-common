@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="CyanogenMod2" fetch="https://github.com/CyanogenMod/" />
+
+  <project name="android_device_lge_l01f" path="device/lge/l01f" remote="CyanogenMod2" revision="cm-13.0"/>
+
+</manifest>
