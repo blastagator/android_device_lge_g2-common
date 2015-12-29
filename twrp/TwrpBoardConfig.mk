@@ -27,6 +27,9 @@ TW_SKIP_RO_PARTITION_CHECK := true
 # Should be on by default, but turn on just in case
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Enable ntfs filesystem tools
+TW_INCLUDE_NTFS_3G := true
+
 ##  Functions to properly set config and files based on existence of an External SD Card
 # Board has an External SD Card (i.e. f320 or lgl22)
 ifneq ($(filter f320 lgl22,$(TARGET_DEVICE)),)
