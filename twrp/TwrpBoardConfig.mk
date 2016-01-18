@@ -20,9 +20,6 @@ TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
-# My custom flags
-TW_SKIP_RO_PARTITION_CHECK := true
-
 # Enable f2fs filesystem tools
 # Should be on by default, but turn on just in case
 TARGET_USERIMAGES_USE_F2FS := true
