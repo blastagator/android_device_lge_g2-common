@@ -15,6 +15,9 @@
 
   <project name="LGG2_Kernel" path="kernel/lge/msm8974" remote="blastagator" revision="aicp-mm6.0-twrp" />
 
+<!-- CM13 removes busybox, add it back (until changeover to toybox) -->
+  <project name="android_external_busybox" path="external/busybox" remote="CyanogenMod2" revision="cm-13.0" />
+
 <!-- Dummy recovery repo for missing files to be symlinked -->
 
   <remove-project name="CyanogenMod/android_bootable_recovery" />
