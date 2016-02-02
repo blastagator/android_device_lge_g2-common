@@ -243,3 +243,6 @@
 /dev/block/mmcblk0p13     0660   system     wifi
 /dev/btlock               0660   bluetooth  net_bt_stack
 /dev/rfkill               0660   wifi       wifi
+
+# ADF Graphics
+/dev/adf*                 0660   media       graphics
