@@ -20,8 +20,8 @@ PRODUCT_PACKAGES += \
 	init.recovery.touchtowake.rc
 	
 # Use g2 usb, instead of TWRP default
-PRODUCT_PACKAGES += \
-	init.recovery.g2.usb.rc
+#PRODUCT_PACKAGES += \
+#	init.recovery.g2.usb.rc
 
 
 # SD Card init remains in board config
