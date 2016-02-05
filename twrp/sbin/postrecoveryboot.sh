@@ -4,7 +4,7 @@
 sleep 5
 
 # change the LED pattern to something less disco
-echo 2 > /sys/devices/i2c-0/0-0032/led_pattern
+#echo 2 > /sys/devices/i2c-0/0-0032/led_pattern
 
 # Tell us that we're in postrecoveryboot.sh
 echo "I:Postrecoveryboot script started!"
