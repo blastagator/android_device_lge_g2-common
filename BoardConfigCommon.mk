@@ -43,7 +43,6 @@ TARGET_KERNEL_SOURCE := kernel/lge/msm8974
 
 # Audio
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
@@ -55,6 +54,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
+TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
@@ -110,6 +110,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/g2-common/releasetools
+
+# RIL
+BOARD_RIL_CLASS += ../../../device/lge/g2-common/ril
 
 # SELinux policies
 include device/qcom/sepolicy/sepolicy.mk

@@ -36,24 +36,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qc_nlp_in_use=0 \
     ro.gps.agps_provider=1
 
-# IO Scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
-
 # Media/offload
+# TODO: Re-enable when it works
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.disable=true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.buffer.size.kb=32 \
     audio.offload.gapless.enabled=true \
-    audio.offload.multiple.enabled=false \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true \
-    av.offload.enable=true \
-    av.streaming.offload.enable=true \
-    tunnel.audio.encode=true
+    av.streaming.offload.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true \
-    mm.enable.smoothstreaming=true
+    media.aac_51_output_enabled=true
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
