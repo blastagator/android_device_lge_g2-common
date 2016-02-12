@@ -265,3 +265,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 $(call inherit-product-if-exists, hardware/qcom/msm8x74/msm8x74.mk)
+
+# Inherit TWRP Stuff
+$(call inherit-product, device/lge/g2-common/twrp/TwrpProduct.mk)
