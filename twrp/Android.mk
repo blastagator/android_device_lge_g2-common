@@ -15,6 +15,15 @@ include $(BUILD_PREBUILT)
 # All of the inits MUST go into ROOT_OUT
 #    Otherwise, the inits will be delated when creating recovery ramdisk
 
+# Use this instead of the previous recovery init
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init.recovery.g2.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := RECOVERY_EXECUTABLES
+LOCAL_SRC_FILES         := init/init.recovery.g2.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
 # Touch to Wake
 include $(CLEAR_VARS)
 LOCAL_MODULE            := init.recovery.touchtowake.rc
