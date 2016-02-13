@@ -1,22 +1,41 @@
-Copyright 2015 - The CyanogenMod Project
+======================================================================
+==============================+ README +==============================
+======================================================================
 
-Device configuration for LG G2.
-=====================================
+Welcome to blastagator's tweaked LG G2 device git.
 
-Basic   | Spec Sheet
--------:|:-------------------------
-CPU     | Quad-core 2.26 GHz Krait 400
-CHIPSET | Qualcomm MSM8974 Snapdragon 800
-GPU     | Adreno 330
-Memory  | 2GB RAM
-Shipped Android Version | 4.2.2
-Storage | 16/32GB
-Battery | 3000 mAh
-Dimensions | 138.5 x 70.9 x 8.9 mm
-Display | 1920 x 1080 pixels, 5.2 in IPS LCD
-Rear Camera  | 13 MP
-Front Camera | 2.1 MP
-Release Date | August 2013
+This git is based on the CM device tree. I tweaked it to build TWRP 
+recovery.
 
+To Build TWRP:
 
-![LG G2](http://www.lg.com/global/g2/images/main/phone00.png "LG G2")
+Determine which version you want to build and find the tag in the git.
+	e.g. to build v3.0.0-3, look in tags and you will find tag 
+	v3.0.0-3-cm13.0
+	
+	The additional -cm13.0 indicates I build the version using the
+	cm-13.0 source tree
+
+1)	Initialize the source tree from the tag you found (e.g. cm-13.0)
+	See cyanogenmod documentation for how to do this
+
+2)	Sync the repo.  (Takes a long time)
+
+3)	Copy the blastagator_<device>.xml and blastagator_g2-common.xml 
+	to your <SOURCE_TREE>/.repo/local_manifests folder.
+
+4)	EDIT the manifest files.  Change the "revision" from whatever it
+	is listed as to the name of the tag for the version you want to
+	build.
+		If you don't edit the revision, you will build the newest
+		version.
+	Be sure to change ONLY g2-common, vendor, kernel, twrp,
+	and specific device.
+		(Five things in total)
+
+5)	Sync the repo again.
+
+6)	Build recovery using cm_<device>-userdebug as the target.
+
+NOTE: Do not extract blobs or run setup-makefiles!  This is not 
+necessary because the vendor tree is repo sync'd automatically.
