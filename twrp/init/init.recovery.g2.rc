@@ -1,7 +1,7 @@
 import /init.recovery.g2.power.rc
 import /init.recovery.touchtowake.rc
 
-# g2 USB
+# g2 twrp usb init
 import /init.recovery.g2.usb.rc
 
 # This is only copied if the variant has an sd_card
