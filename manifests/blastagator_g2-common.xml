@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="blastagator" fetch="https://github.com/blastagator/" />
+  <remote name="DirtyUnicorns" fetch="https://github.com/DirtyUnicorns/" />
+  <remote name="CyanogenMod" fetch="https://github.com/CyanogenMod/" />
+  <remote name="TheMuppets" fetch="https://github.com/TheMuppets/" />
+
+<!-- Device Files -->
+  <project name="cm_device_lge_g2-common" path="device/lge/g2-common" remote="blastagator" revision="du-m" />
+  <project name="LGG2_Kernel" path="kernel/lge/msm8974" remote="blastagator" revision="du-m" />
+
+  <remove-project name="android_frameworks_native" />
+  <project name="android_frameworks_native" path="frameworks/native" remote="blastagator" revision="m" />
+
+<!-- Other Important Things from CM -->
+  <project name="android_device_qcom_common" path="device/qcom/common" remote="CyanogenMod" revision="cm-13.0" />
+  <remove-project name="android_hardware_qcom_power" />
+  <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="CyanogenMod" revision="cm-13.0" />
+  <project name="android_external_stlport" path="external/stlport" remote="CyanogenMod" revision="cm-13.0" />
+  <project name="android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="CyanogenMod" revision="cm-13.0" />
+
+<!-- Vendor Blobs -->
+  <remove-project name="android_vendor_lge" />
+  <project name="proprietary_vendor_lge" path="vendor/lge" remote="TheMuppets" revision="cm-13.0" />
+
+</manifest>
