@@ -15,7 +15,7 @@
 
 <!-- Main Project -->
 
-  <project name="android_bootable_recovery" path="bootable/recovery-twrp" remote="blastagator" revision="android-6.0"/>
+  <project name="android_bootable_recovery" path="bootable/recovery-twrp" remote="blastagator" revision="cm-13.0-twrp"/>
 
 
 
