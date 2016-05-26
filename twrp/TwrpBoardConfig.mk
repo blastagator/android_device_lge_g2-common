@@ -15,7 +15,7 @@ TW_DEFAULT_BRIGHTNESS := 175
 TW_NO_USB_STORAGE := true
 TW_INCLUDE_L_CRYPTO := true
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "/data"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_TARGET_USES_QCOM_BSP := true
 TW_EXTRA_LANGUAGES := true
@@ -33,7 +33,7 @@ TW_INCLUDE_NTFS_3G := true
 ifneq ($(filter f320 lgl22,$(TARGET_DEVICE)),)
     BOARD_HAS_NO_REAL_SDCARD := false
     TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-    TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+    TW_EXTERNAL_STORAGE_MOUNT_POINT := "/external_sd"
 	PRODUCT_COPY_FILES += device/lge/g2-common/twrp/fstab/twrp.g2.has_sd.fstab:recovery/root/etc/twrp.fstab
 	# Must go to ROOT (not recovery root) because inits are deleted and overwritten in the recovery root
 	PRODUCT_COPY_FILES += device/lge/g2-common/twrp/init/init.recovery.sd_card.rc:root/init.recovery.sd_card.rc
