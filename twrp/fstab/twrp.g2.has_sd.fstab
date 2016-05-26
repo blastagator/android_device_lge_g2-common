@@ -12,5 +12,5 @@
 # Can cause crashes
 #/misc emmc /dev/block/platform/msm_sdcc.1/by-name/misc
 
-# Mount f320 external SD Card
+# Mount f320/lgl22 external SD Card
 /external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=backup=0;display="External SD";storage;removable;wipeingui
