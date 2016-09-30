@@ -36,6 +36,7 @@ BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/g2-common/releasetools/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=g2 user_debug=31
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x05000000 --tags_offset 0x00000100
@@ -74,6 +75,10 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
+
+# Encryption / Keymaster
+TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
