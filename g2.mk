@@ -128,6 +128,11 @@ PRODUCT_PACKAGES += \
     set_baseband.sh \
     ueventd.g2.rc
 
+# iSu Support
+PRODUCT_PACKAGES += \
+    init.superuser.isu.rc \
+    isu.sh
+
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \

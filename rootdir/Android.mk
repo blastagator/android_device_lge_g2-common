@@ -58,3 +58,21 @@ LOCAL_MODULE_CLASS      := ETC
 LOCAL_SRC_FILES         := etc/ueventd.g2.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
+
+# iSu Support
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init.superuser.isu.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := etc/init.superuser.isu.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := isu.sh
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := sbin/isu.sh
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)/sbin
+include $(BUILD_PREBUILT)
