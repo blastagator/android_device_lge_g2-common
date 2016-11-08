@@ -118,6 +118,9 @@ BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
 BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 TARGET_RIL_VARIANT := caf
 
+# SDClang
+TARGET_USE_SDCLANG := true
+
 # SELinux policies
 include device/qcom/sepolicy/sepolicy.mk
 
