@@ -1,41 +1,46 @@
 #!/system/bin/sh
-# Service for iSu support to make sure we don't lose root
 
-mount -o rw,remount /system
+# simple service to make shore SU is in place after a reboot that the user has disable it without this no SU after boot
 
-# Make tmp folder
-if [ ! -e /data/tmp ]; then
-	mkdir /data/tmp;
-	echo "boot start $(date)" > /data/tmp/bootcheck.txt;
-else
-	echo "boot start $(date)" > /data/tmp/bootcheck.txt;
-fi;
+# service example do it on boot to reboot and mv works
+#on boot 
+#    start isu
+#service isu /sbin/isu.sh
+#    class main
+#    user root
+#    seclabel u:r:init:s0
+#    disabled
+#    oneshot
 
-# Move bin and xbin back
-# Isu support
-if [ -e /system/bin/temp_su ]; then
-	mv /system/bin/temp_su /system/bin/su
-fi
-
-if [ -e /system/xbin/isu ]; then
-	mv /system/xbin/isu /system/xbin/su
-	if [ ! -e /system/bin/su ]; then
-		ln -s -f /system/xbin/su /system/bin/su
+if [ "$1" = "boot" ]; then
+	mount -o rw,remount /system
+	# Move bin and xbin back
+	# Isu support
+	if [ -e /system/bin/temp_su ]; then
+		mv /system/bin/temp_su /system/bin/su
 	fi
-# Isu end
+
+	if [ -e /system/xbin/isu ]; then
+		mv /system/xbin/isu /system/xbin/su
+		if [ ! -e /system/bin/su ]; then
+			ln -s -f /system/xbin/su /system/bin/su
+		fi
+	# Isu end
+	fi
+
+	# give su root:root to adb su work optional/recommended
+	if [ -e /system/xbin/su ]; then
+		chown root:root /system/xbin/su
+	fi
+
+	/system/bin/log -t isu_init -p i "isu init.sh start boot ok"
+	mount -o ro,remount /system;
+	umount /system;
+# enforce selinux need to pass safety net only apply after boot complete
+elif [ "$1" = "boot_completed" ]; then
+	echo 'isu_init: isu init.sh start boot_completed ok' > /dev/kmsg;
+	/system/bin/log -t isu_init -p i "isu init.sh start boot_completed ok"
+	setenforce 1
 fi
-
-# give su root:root to adb su work optional/recommended
-if [ -e /system/xbin/su ]; then
-	chown root:root /system/xbin/su
-fi
-
-echo "iSu.sh initiated on $(date)" >> /data/tmp/bootcheck.txt
-
-# Changed from original code --blastagator
-mount -o ro,remount /system
-
-# enforce selinux need to pass safety net
-#setenforce 1
 
 exit
