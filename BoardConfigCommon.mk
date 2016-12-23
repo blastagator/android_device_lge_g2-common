@@ -121,6 +121,8 @@ BOARD_RIL_CLASS += ../../../device/lge/g2-common/ril
 TARGET_USE_SDCLANG := true
 
 # SEPolicy
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += \
     device/lge/g2-common/sepolicy
 
