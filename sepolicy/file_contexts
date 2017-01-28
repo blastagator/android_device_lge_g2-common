@@ -34,9 +34,6 @@
 /sys/class/android_usb/f_rmnet_smd_sdio/transport  --  u:object_r:sysfs_rmnet:s0
 /sys/devices/virtual/android_usb/android0/f_rmnet_smd_sdio/transport  --  u:object_r:sysfs_rmnet:s0
 
-# SMDPKT
-/sys/devices/virtual/smdpkt/smdcnt_rev[0-9]/power/runtime_suspended_time         u:object_r:sysfs_smdpkt:s0
-
 # Sensors
 /persist-lg/sensors(/.*)?                           u:object_r:sensors_persist_file:s0
 /sns(/.*)?                                          u:object_r:sensors_persist_file:s0
