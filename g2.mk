@@ -275,3 +275,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bcmdhd.cal:system/vendor/etc/wifi/bcmdhd.cal
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
+
+# Inherit TWRP Stuff
+$(call inherit-product, device/lge/g2-common/twrp/TwrpProduct.mk)
