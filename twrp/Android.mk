@@ -41,11 +41,11 @@ LOCAL_SRC_FILES         := init/init.recovery.touchtowake.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-# USB (Use my combination of g2 & twrp)
+# USB (use g2 default, plus twrp adds its usb init, so together we're good)
 include $(CLEAR_VARS)
 LOCAL_MODULE            := init.recovery.g2.usb.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := RECOVERY_EXECUTABLES
-LOCAL_SRC_FILES         := init/init.recovery.g2.usb.rc
+LOCAL_SRC_FILES         := ../rootdir/etc/init.g2.usb.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
