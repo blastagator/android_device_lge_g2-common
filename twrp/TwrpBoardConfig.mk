@@ -2,6 +2,9 @@
 ### Specific Options for TWRP Building  ###
 ###                                     ###
 
+# Extra command line, in case of JB/KK bootloader
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x0 mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_g2_lgd_cmd
+
 # Common Options
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
