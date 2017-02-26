@@ -22,7 +22,6 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "/data"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_TARGET_USES_QCOM_BSP := true
 TW_EXTRA_LANGUAGES := true
-TW_INCLUDE_JPEG := true
 
 # Enable f2fs filesystem tools
 # Should be on by default, but turn on just in case
