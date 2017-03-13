@@ -2,8 +2,10 @@
 ### Specific Options for TWRP Building  ###
 ###                                     ###
 
-# Extra command line, in case of JB/KK bootloader
+# Extra command line, in case of JB bootloader
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x0 mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_g2_lgd_cmd
+# Override tags offset (JB doesn't like x100)
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x05000000 --tags_offset 0x04800000
 
 # Common Options
 RECOVERY_VARIANT := twrp
