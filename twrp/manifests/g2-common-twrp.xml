@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="blastagator" fetch="https://github.com/blastagator/" />
+  <remote name="CyanogenMod2" fetch="https://github.com/CyanogenMod/" />
+  <remote name="LineageOS2" fetch="https://github.com/LineageOS/" />
+  <remote name="omnirom2" fetch="https://github.com/omnirom/" />
+  <remote name="galatic" fetch="https://github.com/GalaticStryder/" />
+  <remote name="mdmower" fetch="https://github.com/mdmower/" />
+
+<!-- TWRP -->
+  <project name="android_bootable_recovery" path="bootable/recovery-twrp" remote="blastagator" revision="lineage-15.0"/>
+  <!--<project name="android_bootable_recovery" path="bootable/recovery-twrp" remote="omnirom2" revision="android-7.1"/>-->
+  <!--<project name="twrp" path="bootable/recovery-twrp" remote="mdmower" revision="cm-14.1"/>-->
+
+<!-- Busybox -->
+  <project name="android_external_busybox" path="external/busybox" remote="LineageOS2" revision="cm-14.1" />
+
+<!-- Device Files -->
+  <project name="cm_device_lge_g2-common" path="device/lge/g2-common" remote="blastagator" revision="cm-14.1-twrp3.2" />
+  <project name="LGG2_Kernel" path="kernel/lge/msm8974" remote="blastagator" revision="cm-14.1-twrp" />
+
+  <project name="themuppets_proprietary_vendor_lge" path="vendor/lge" remote="blastagator" revision="cm-13.0" />
+
+
+<!-- Other Important Things from CM -->
+  <project name="android_device_qcom_common" path="device/qcom/common" remote="LineageOS2" revision="cm-14.1" />
+  <project name="android_external_stlport" path="external/stlport" remote="LineageOS2" revision="cm-14.1" />
+  <project name="android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="LineageOS2" revision="cm-14.1" />
+
+</manifest>
