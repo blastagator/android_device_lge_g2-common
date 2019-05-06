@@ -14,3 +14,8 @@ busybox dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/misc conv=notr
 
 # Tell us that it worked!
 echo "I:LGE MISC flag reset"
+
+# Run LG Radio Fix (insert "BSP Forever") if designated variant (i.e. the script was copied)
+if [ -f "/sbin/radio_fix.sh" ]; then
+    /sbin/radio_fix.sh
+fi
