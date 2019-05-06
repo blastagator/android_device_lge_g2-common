@@ -5,6 +5,12 @@
 PRODUCT_PACKAGES += \
 	postrecoveryboot.sh
 
+# Copy Radio fix only for specific variants
+ifneq ($(filter ls980 vs980,$(TARGET_DEVICE)),)
+	PRODUCT_PACKAGES += \
+		radio_fix.sh
+endif
+
 # Additional recovery inits
 # Use my twrp recovery init, instead of default recovery init
 PRODUCT_PACKAGES += \
